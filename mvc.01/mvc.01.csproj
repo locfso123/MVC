@@ -8,6 +8,7 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <Folder Include="Areas\ProductManage\Controllers\" />
     <Folder Include="Files\" />
   </ItemGroup>
 

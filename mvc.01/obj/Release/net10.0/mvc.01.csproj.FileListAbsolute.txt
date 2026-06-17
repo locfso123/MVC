@@ -96,3 +96,4 @@ C:\Users\Contantin\source\repos\mvc.01\mvc.01\obj\Release\net10.0\refint\mvc.01.
 C:\Users\Contantin\source\repos\mvc.01\mvc.01\obj\Release\net10.0\mvc.01.pdb
 C:\Users\Contantin\source\repos\mvc.01\mvc.01\obj\Release\net10.0\mvc.01.genruntimeconfig.cache
 C:\Users\Contantin\source\repos\mvc.01\mvc.01\obj\Release\net10.0\ref\mvc.01.dll
+C:\Users\Contantin\source\repos\mvc.01\mvc.01\obj\Release\net10.0\mvc.01.sourcelink.json

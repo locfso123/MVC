@@ -61,6 +61,14 @@ wwwroot\lib\jquery\dist\jquery.slim.js
 wwwroot\lib\jquery\dist\jquery.slim.min.js
 wwwroot\lib\jquery\dist\jquery.slim.min.map
 wwwroot\lib\jquery\LICENSE.txt
+wwwroot\planet\Earth.jpg
+wwwroot\planet\Jupiter.jpg
+wwwroot\planet\Mars.jpg
+wwwroot\planet\Mercury.jpg
+wwwroot\planet\Neptune.jpg
+wwwroot\planet\Saturn.jpg
+wwwroot\planet\Uranus.jpg
+wwwroot\planet\Venus.jpg
 C:\Users\Contantin\source\repos\mvc.01\mvc.01\wwwroot\css\site.css
 C:\Users\Contantin\source\repos\mvc.01\mvc.01\wwwroot\favicon.ico
 C:\Users\Contantin\source\repos\mvc.01\mvc.01\wwwroot\js\site.js
