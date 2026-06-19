@@ -15,7 +15,7 @@ namespace mvc._01.Controllers
             _logger = logger;
         }
 
-        [Route("cac-san-pham/{id?}")]]
+        [Route("cac-san-pham/{id?}")]
         public IActionResult Index()
         {
             var products = _productService.OrderBy(p => p.Name).ToList();

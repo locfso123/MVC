@@ -8,8 +8,20 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <Folder Include="Areas\Contact\Data\" />
+    <Folder Include="Areas\Contact\Models\" />
+    <Folder Include="Areas\Contact\Views\Contact\" />
     <Folder Include="Areas\ProductManage\Controllers\" />
     <Folder Include="Files\" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Microsoft.EntityFrameworkCore" Version="10.0.9" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore.SqlServer" Version="10.0.9" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore.Tools" Version="10.0.9">
+      <PrivateAssets>all</PrivateAssets>
+      <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+    </PackageReference>
   </ItemGroup>
 
 </Project>
