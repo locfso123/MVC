@@ -3,7 +3,7 @@ using Microsoft.EntityFrameworkCore.Migrations;
 
 #nullable disable
 
-namespace mvc._01.Migrations
+namespace mvc01.Migrations
 {
     /// <inheritdoc />
     public partial class Contact : Migration

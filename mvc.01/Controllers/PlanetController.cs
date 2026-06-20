@@ -1,8 +1,8 @@
 ﻿using Microsoft.AspNetCore.Mvc;
-using mvc._01.Services;
+using mvc01.Services;
 using System.Xml.Linq;
 
-namespace mvc._01.Controllers
+namespace mvc01.Controllers
 {
     [Route("he-mat-troi/[action]")]
     public class PlanetController : Controller

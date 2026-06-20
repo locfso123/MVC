@@ -5,11 +5,11 @@ using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
 using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
-using mvc._01.Models;
+using mvc01.Models;
 
 #nullable disable
 
-namespace mvc._01.Migrations
+namespace mvc01.Migrations
 {
     [DbContext(typeof(AppDbContext))]
     [Migration("20260619025621_Contact")]
@@ -25,7 +25,7 @@ namespace mvc._01.Migrations
 
             SqlServerModelBuilderExtensions.UseIdentityColumns(modelBuilder);
 
-            modelBuilder.Entity("mvc._01.Models.Contact.Contact", b =>
+            modelBuilder.Entity("mvc01.Models.Contact.Contact", b =>
                 {
                     b.Property<int>("Id")
                         .ValueGeneratedOnAdd()

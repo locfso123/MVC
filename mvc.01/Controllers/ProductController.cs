@@ -1,7 +1,7 @@
 ﻿using Microsoft.AspNetCore.Mvc;
-using mvc._01.Services;
+using mvc01.Services;
 
-namespace mvc._01.Controllers
+namespace mvc01.Controllers
 {
     [Area("ProductManage")]
     public class ProductController : Controller

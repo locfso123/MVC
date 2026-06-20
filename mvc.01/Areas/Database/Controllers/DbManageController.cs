@@ -1,8 +1,8 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
-using mvc._01.Models;
+using mvc01.Models;
 
-namespace mvc._01.Areas.Database.Controllers
+namespace mvc01.Areas.Database.Controllers
 {
     [Area("Database")]
     [Route("/database-manage/[action]")]

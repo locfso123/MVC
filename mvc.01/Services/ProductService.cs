@@ -1,6 +1,6 @@
-﻿using mvc._01.Models;
+﻿using mvc01.Models;
 
-namespace mvc._01.Services
+namespace mvc01.Services
 {
     public class ProductService : List<ProductModel>
     {

@@ -1,10 +1,10 @@
-@model IEnumerable<mvc._01.Models.Contact.Contact>
+@model IEnumerable<mvc01.Models.Contact.Contact>
 
 @{
-    ViewData["Title"] = "Contact Management";
+    ViewData["Title"] = "Danh sach lien he";
 }
 
-<h1>Contact Management</h1>
+<h1>@ViewData["Title"]</h1>
 
 <p>
     <a asp-action="SendContact" class="btn btn-primary">Create New</a>
@@ -45,8 +45,8 @@
                     @Html.DisplayFor(modelItem => item.phone)
                 </td>
                 <td>
-                    <a asp-action="Details" asp-route-id="@item.Id">Details</a> |
-                    <a asp-action="Delete" asp-route-id="@item.Id">Delete</a>
+                    <a asp-action="Details" asp-route-id="@item.Id">Xem</a> |
+                    <a asp-action="Delete" asp-route-id="@item.Id">Xoa</a>
                 </td>
             </tr>
         }

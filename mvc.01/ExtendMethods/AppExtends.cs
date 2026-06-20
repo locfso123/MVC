@@ -1,7 +1,7 @@
 ﻿using System.Net;
 using System.Runtime.CompilerServices;
 
-namespace mvc._01.ExtendMethods
+namespace mvc01.ExtendMethods
 {
     public static class AppExtends
     {

@@ -1,5 +1,5 @@
 ﻿using Microsoft.EntityFrameworkCore;
-namespace mvc._01.Models
+namespace mvc01.Models
 {
     public class AppDbContext : DbContext
     {

@@ -1,10 +1,10 @@
 using Microsoft.AspNetCore.Mvc;
-using mvc._01.Models.Contact;
+using mvc01.Models.Contact;
 using Microsoft.EntityFrameworkCore;
-using mvc._01.Models;
+using mvc01.Models;
 using Microsoft.AspNetCore.Authorization;
 
-namespace mvc._01.Areas.Contact.Controllers
+namespace mvc01.Areas.Contact.Controllers
 {
     [Area("Contact")]
     public class ContactController : Controller
@@ -42,6 +42,9 @@ namespace mvc._01.Areas.Contact.Controllers
             return View(contact);
         }
 
+        [TempData]
+        public string StatusMessage { get; set; }
+
         // GET: Contact/Create
         //public IActionResult Create()
         [HttpGet("/contact/")]
@@ -56,13 +59,19 @@ namespace mvc._01.Areas.Contact.Controllers
         [AllowAnonymous]
         [ValidateAntiForgeryToken]
         //public async Task<IActionResult> Create([Bind("Id,FullName,Email,DateSent,Message,phone")] Contact contact)
-        public async Task<IActionResult> SendContact([Bind("Id,FullName,Email,DateSent,Message,phone")] Contact.Controllers.ContactController contact)
+        public async Task<IActionResult> SendContact([Bind("Id,FullName,Email,Message,phone")] Models.Contact.Contact contact)
         {
             if (ModelState.IsValid)
             {
+                contact.DateSent = DateTime.Now;
+
                 _dbContext.Add(contact);
                 await _dbContext.SaveChangesAsync();
-                return RedirectToAction(nameof(Index));
+
+                StatusMessage = "Lien he cua ban da duoc gui";
+
+               /* return RedirectToAction(nameof(Index));*/
+                return RedirectToAction("Index", "Home");
             }
             return View(contact);
         }

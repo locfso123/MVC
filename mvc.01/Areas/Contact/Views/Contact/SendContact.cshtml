@@ -1,16 +1,20 @@
-@model mvc._01.Models.Contact.Contact
+@model mvc01.Models.Contact.Contact
 
 @{
-    ViewData["Title"] = "Send Contact";
+    ViewData["Title"] = "Gui lien he toi AppMvc";
 }
 
-<h1>Send Contact</h1>
-
-<h4>Contact</h4>
 <hr />
 <div class="row">
     <div class="col-md-4">
-        <form asp-action="SendContact">
+        <div class="contact-firstcol p-2 h-100">
+            <h1>@ViewData["Title"]</h1>
+
+            <h4>Chung toi luon lang nghe cac y kien cua ban!</h4>
+        </div>
+    </div>
+    <div class="col-md-8">
+        <form asp-action="SendContact" class="formcontact">
             <div asp-validation-summary="ModelOnly" class="text-danger"></div>
             <div class="form-group">
                 <label asp-for="FullName" class="control-label"></label>
@@ -29,19 +33,16 @@
             </div>
             <div class="form-group">
                 <label asp-for="Message" class="control-label"></label>
-                <textarea asp-for="Message" class="form-control"></textarea>
+                <textarea rows="5" asp-for="Message" class="form-control"></textarea>
                 <span asp-validation-for="Message" class="text-danger"></span>
             </div>
             <div class="form-group">
-                <input type="submit" value="Send" class="btn btn-primary" />
+                <input type="submit" value="Gui lien he" class="btn btn-primary" />
             </div>
         </form>
     </div>
 </div>
 
-<div>
-    <a asp-action="Index" class="btn btn-secondary">Back to List</a>
-</div>
 
 @section Scripts {
     @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}

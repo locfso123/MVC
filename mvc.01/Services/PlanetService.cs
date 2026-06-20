@@ -1,7 +1,7 @@
-﻿using mvc._01.Models;
+﻿using mvc01.Models;
 using System.Security.Cryptography.X509Certificates;
 
-namespace mvc._01.Services
+namespace mvc01.Services
 {
     public class PlanetService : List<PlanetModel>
     {

@@ -1,13 +1,12 @@
-@model mvc._01.Models.Contact.Contact
+@model mvc01.Models.Contact.Contact
 
 @{
-    ViewData["Title"] = "Contact Details";
+    ViewData["Title"] = "Thong tin lien he";
 }
 
-<h1>Contact Details</h1>
+<h1>@ViewData["Title"]</h1>
 
 <div>
-    <h4>Contact</h4>
     <hr />
     <dl class="row">
         <dt class="col-sm-2">
@@ -43,5 +42,5 @@
     </dl>
 </div>
 <div>
-    <a asp-action="Index" class="btn btn-secondary">Back to List</a>
+    <a asp-action="Index" class="btn btn-secondary">Danh sach lien he</a>
 </div>
