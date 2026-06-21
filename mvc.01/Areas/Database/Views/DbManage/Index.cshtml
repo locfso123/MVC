@@ -28,8 +28,8 @@
 
 @if (dbContext.Database.GetPendingMigrations().Any())
 {
-    <form>
-        <button class="btn btn-danger" asp-action="Migrate">tao Databasee (Cap nhap Migration)</button>
+    <form method="post">
+        <button class="btn btn-primary" asp-action="Migrate">tao Databasee (Cap nhap Migration)</button>
     </form>
 }
 

@@ -1,7 +1,10 @@
-﻿using Microsoft.EntityFrameworkCore;
+﻿using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
+using Microsoft.EntityFrameworkCore;
+using mvc01.Models.Blog;
+
 namespace mvc01.Models
 {
-    public class AppDbContext : DbContext
+    public class AppDbContext : IdentityDbContext<AppUser>
     {
         public AppDbContext(DbContextOptions<AppDbContext> options) : base(options) 
         { 
@@ -16,16 +19,23 @@ namespace mvc01.Models
         {
             base.OnModelCreating(modelBuilder);
 
-           /* foreach (var entityType in modelBuilder.Model.GetEntityTypes())
+            foreach (var entityType in modelBuilder.Model.GetEntityTypes())
             {
                 var tableName = entityType.GetTableName();
                 if (tableName.StartsWith("AspNet"))
                 {
                     entityType.SetTableName(tableName.Substring(6));
                 }
-            }*/
+            }
+
+            modelBuilder.Entity<Category>(entity =>
+            {
+                entity.HasIndex(c => c.Slug);
+            });
         }
 
         public DbSet<Contact.Contact> Contacts { get; set; }
+
+        public DbSet<Category> Categories { get; set; }
     }
 }
