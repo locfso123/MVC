@@ -1,0 +1,30 @@
+@model SendCodeViewModel
+@{
+    ViewData["Title"] = "Gửi mã xác thực";
+}
+
+@if (Model == null)
+{
+    <div class="alert alert-warning">
+        Phiên đăng nhập đã hết hạn hoặc không hợp lệ. Vui lòng <a asp-controller="Account" asp-action="Login" asp-route-returnurl="@ViewData["ReturnUrl"]">đăng nhập</a> lại.
+    </div>
+}
+else
+{
+    <h1>@ViewData["Title"].</h1>
+
+    <form asp-controller="Account" asp-action="SendCode" asp-route-returnurl="@Model.ReturnUrl" method="post" class="form-horizontal" role="form">
+        <input asp-for="RememberMe" type="hidden" />
+        <div class="row">
+            <div class="col-md-8">
+                Mã xác thực gửi tới:
+                <select asp-for="SelectedProvider" asp-items="Model.Providers"></select>
+                <button type="submit" class="btn btn-success btn-sm">Gửi</button>
+            </div>
+        </div>
+    </form>
+}
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial"); }
+}

@@ -9,10 +9,18 @@ using System.Reflection.Metadata;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.AspNetCore.Identity;
 using mvc01.Data;
+using App.Services;
+using App.Models;
+using App.Data;
 
 var builder = WebApplication.CreateBuilder(args);
 
-builder.Services.AddDbContext<AppDbContext>(options =>
+builder.Services.AddOptions();
+var mailsetting = builder.Configuration.GetSection("MailSettings");
+builder.Services.Configure<MailSettings>(mailsetting);
+builder.Services.AddSingleton<IEmailSender, SendMailService>();
+
+builder.Services.AddDbContext<mvc01.Models.AppDbContext>(options =>
 {
     string connectionString = builder.Configuration.GetConnectionString("AppDbContext");
     options.UseSqlServer(connectionString);
@@ -30,8 +38,8 @@ builder.Services.Configure<RazorViewEngineOptions>(options =>
 builder.Services.AddSingleton(typeof(ProductService), typeof(ProductService));
 builder.Services.AddSingleton<PlanetService>();
 
-builder.Services.AddIdentity<ApplicationUser, IdentityRole>()
-                .AddEntityFrameworkStores<AppDbContext>()
+builder.Services.AddIdentity<AppUser, IdentityRole>()
+                .AddEntityFrameworkStores<mvc01.Models.AppDbContext>()
                 .AddDefaultTokenProviders();
 
 // Truy cập IdentityOptions
@@ -72,13 +80,23 @@ builder.Services.AddAuthentication()
     .AddGoogle(options =>
     {
         var gconfig = builder.Configuration.GetSection("Authentication:Google");
-
+            
         options.ClientId = gconfig["ClientId"];
         options.ClientSecret = gconfig["ClientSecret"];
         options.CallbackPath = "/dang-nhap-tu-google";
 
     });
 
+builder.Services.AddSingleton<IdentityErrorDescriber, AppIdentityErrorDescriber>();
+
+builder.Services.AddAuthorization(options =>
+{
+    options.AddPolicy("ViewManageMenu", builder =>
+    {
+        builder.RequireAuthenticatedUser();
+        builder.RequireRole (RoleName.Administrator);
+    });
+});
 
 var app = builder.Build();
 

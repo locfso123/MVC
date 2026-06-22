@@ -1,4 +1,5 @@
-﻿using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
+﻿using App.Models;
+using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore;
 using mvc01.Models.Blog;
 
@@ -34,7 +35,7 @@ namespace mvc01.Models
             });
         }
 
-        public DbSet<Contact.Contact> Contacts { get; set; }
+        public DbSet<mvc01.Models.Contact.Contact> Contacts { get; set; }
 
         public DbSet<Category> Categories { get; set; }
     }

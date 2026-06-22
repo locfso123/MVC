@@ -1,14 +1,30 @@
-﻿ <div class="dropdown">
-    <a class="btn btn-outline-danger dropdown-toggle" href="#"
-    id="managedropdownmenu" data-bs-toggle="dropdown">
-        Manage
-    </a>
-    <div class="dropdown-menu" aria-labelledby="managedropdownmenu">
-        <a class="dropdown-item" asp-action="Index" asp-controller="DbManage" asp-area="Database">
-            Database
+﻿@using Microsoft.AspNetCore.Authorization
+@inject IAuthorizationService authorizationService
+
+@{
+    var result = await authorizationService.AuthorizeAsync(this.User, "ViewManageMenu");
+}
+
+@if (result.Succeeded)
+{
+    <div class="dropdown">
+        <a class="btn btn-outline-danger dropdown-toggle" href="#"
+        id="managedropdownmenu" data-bs-toggle="dropdown">
+            Manage
         </a>
-        <a class="dropdown-item" asp-action="Index" asp-controller="Contact" asp-area="Contact">
-            Quan ly lien he
-        </a>
+        <div class="dropdown-menu" aria-labelledby="managedropdownmenu">
+            <a class="dropdown-item" asp-action="Index" asp-controller="DbManage" asp-area="Database">
+                Database
+            </a>
+            <a class="dropdown-item" asp-action="Index" asp-controller="Contact" asp-area="Contact">
+                Quan ly lien he
+            </a>
+            <a class="dropdown-item" asp-action="Index" asp-controller="Role" asp-area="Identity">
+                Quan ly Role (vai tro)
+            </a>
+            <a class="dropdown-item" asp-action="Index" asp-controller="User" asp-area="Identity">
+                Quan ly User
+            </a>
+        </div>
     </div>
-</div>
+}
