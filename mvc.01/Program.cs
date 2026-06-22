@@ -61,6 +61,25 @@ builder.Services.Configure<IdentityOptions>(options =>
 
 });
 
+builder.Services.ConfigureApplicationCookie(options =>
+{
+    options.LoginPath = "/Identity/Account/Login";
+    options.LogoutPath = "/Identity/Account/Logout";
+    options.AccessDeniedPath = "/Identity/Account/AccessDenied";
+});
+
+builder.Services.AddAuthentication()
+    .AddGoogle(options =>
+    {
+        var gconfig = builder.Configuration.GetSection("Authentication:Google");
+
+        options.ClientId = gconfig["ClientId"];
+        options.ClientSecret = gconfig["ClientSecret"];
+        options.CallbackPath = "/dang-nhap-tu-google";
+
+    });
+
+
 var app = builder.Build();
 
 // Configure the HTTP request pipeline.
