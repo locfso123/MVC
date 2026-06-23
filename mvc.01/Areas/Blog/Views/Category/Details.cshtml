@@ -1,7 +1,7 @@
 @model mvc01.Models.Blog.Category
 
 @{
-    ViewData["Title"] = "Chi tiết Danh mục";
+    ViewData["Title"] = Model.Title;
 }
 
 <h1>Chi tiết Danh mục</h1>
@@ -10,30 +10,33 @@
     <h4>Category</h4>
     <hr />
     <dl class="row">
-        <dt class="col-sm-2">
+        @*  <dt class="col-sm-2">
             @Html.DisplayNameFor(model => model.Title)
         </dt>
         <dd class="col-sm-10">
             @Html.DisplayFor(model => model.Title)
-        </dd>
+        </dd> *@
         <dt class="col-sm-2">
-            @Html.DisplayNameFor(model => model.Description)
+           @*  @Html.DisplayNameFor(model => model.Description) *@
+           Noi dung
         </dt>
         <dd class="col-sm-10">
-            @Html.DisplayFor(model => model.Description)
+            @Html.Raw(Model.Description)
+            @* @Html.DisplayFor(model => model.Description) *@
         </dd>
         <dt class="col-sm-2">
-            @Html.DisplayNameFor(model => model.Slug)
+           @*  @Html.DisplayNameFor(model => model.Slug) *@
+           Url
         </dt>
         <dd class="col-sm-10">
             @Html.DisplayFor(model => model.Slug)
         </dd>
-        <dt class="col-sm-2">
+        @* <dt class="col-sm-2">
             @Html.DisplayNameFor(model => model.ParentCategory)
         </dt>
         <dd class="col-sm-10">
             @Html.DisplayFor(model => model.ParentCategory.Title)
-        </dd>
+        </dd> *@
         <dt class="col-sm-2">
             @Html.DisplayNameFor(model => model.CategoryChildren)
         </dt>
@@ -56,5 +59,5 @@
 </div>
 <div>
     <a asp-action="Edit" asp-route-id="@Model.Id" class="btn btn-primary">Sửa</a> |
-    <a asp-action="Index" class="btn btn-secondary">Quay lại danh sách</a>
+    <a asp-action="Index" class="btn btn-secondary">Quay lại danh sách chuyen muc</a>
 </div>

@@ -1,13 +1,13 @@
 @model IEnumerable<mvc01.Models.Blog.Category>
 
 @{
-    ViewData["Title"] = "Quản lý Danh mục";
+    ViewData["Title"] = "Chuyen muc Blog";
 }
 
-<h1>Quản lý Danh mục</h1>
+<h1>@ViewData["Title"]</h1>
 
 <p>
-    <a asp-action="Create" class="btn btn-primary">Tạo mới</a>
+    <a asp-action="Create" class="btn btn-primary btn-sm">Tạo chuyen muc    </a>
 </p>
 
 <table class="table">
@@ -19,31 +19,47 @@
             <th>
                 @Html.DisplayNameFor(model => model.Slug)
             </th>
-            <th>
+            @* <th>
                 @Html.DisplayNameFor(model => model.ParentCategory)
-            </th>
+            </th> *@
             <th></th>
         </tr>
     </thead>
     <tbody>
         @foreach (var item in Model)
         {
-            <tr>
+            await RenderCategory(item, 0);
+        }
+    </tbody>
+</table>
+
+@{
+    async Task RenderCategory(Category item, int level){
+        string prefix = string.Concat(Enumerable.Repeat("&nbsp;&nbsp;&nbsp;", level));
+             <tr>
                 <td>
-                    @Html.DisplayFor(modelItem => item.Title)
+                    @Html.Raw(@prefix) 
+                    <a asp-action="Edit" asp-route-id="@item.Id">@Html.DisplayFor(modelItem => item.Title)</a>
                 </td>
                 <td>
                     @Html.DisplayFor(modelItem => item.Slug)
                 </td>
-                <td>
+                @* <td>
                     @Html.DisplayFor(modelItem => item.ParentCategory.Title)
-                </td>
+                </td> *@
                 <td>
-                    <a asp-action="Details" asp-route-id="@item.Id">Chi tiết</a> |
-                    <a asp-action="Edit" asp-route-id="@item.Id">Sửa</a> |
+                    <a asp-action="Details" asp-route-id="@item.Id">Chi tiết</a>
+                     |
                     <a asp-action="Delete" asp-route-id="@item.Id">Xóa</a>
                 </td>
             </tr>
-        }
-    </tbody>
-</table>
+
+            if(item.CategoryChildren?.Count > 0)
+            {
+                foreach(var Category in item.CategoryChildren)
+                {
+                    await RenderCategory(Category, level+1);
+                }
+            }
+    }
+}

@@ -1,4 +1,4 @@
-namespace App.Data
+namespace mvc01.Data
 {
     public class RoleName 
     {

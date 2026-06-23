@@ -1,4 +1,4 @@
-﻿@using Microsoft.AspNetCore.Authorization
+﻿        @using Microsoft.AspNetCore.Authorization
 @inject IAuthorizationService authorizationService
 
 @{
@@ -25,6 +25,9 @@
             <a class="dropdown-item" asp-action="Index" asp-controller="User" asp-area="Identity">
                 Quan ly User
             </a>
+            <a class="dropdown-item" asp-action="Index" asp-controller="Category" asp-area="Blog">
+                Quan ly chuyen muc blog
+            </a>    
         </div>
     </div>
 }

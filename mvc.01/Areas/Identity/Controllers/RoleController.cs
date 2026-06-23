@@ -7,7 +7,6 @@ using System.Security.Claims;
 using System.Threading.Tasks;
 using App.Areas.Identity.Models.ManageViewModels;
 using App.Areas.Identity.Models.RoleViewModels;
-using App.Data;
 using App.ExtendMethods;
 using App.Models;
 using App.Services;
@@ -16,6 +15,7 @@ using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Logging;
+using mvc01.Data;
 using mvc01.Models;
 using AppDbContext = mvc01.Models.AppDbContext;
 

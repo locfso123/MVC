@@ -11,7 +11,6 @@ using Microsoft.AspNetCore.Identity;
 using mvc01.Data;
 using App.Services;
 using App.Models;
-using App.Data;
 
 var builder = WebApplication.CreateBuilder(args);
 

@@ -1,7 +1,7 @@
-﻿using App.Data;
-using Microsoft.AspNetCore.Identity;
+﻿using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
+using mvc01.Data;
 using mvc01.Models;
 
 namespace mvc01.Areas.Database.Controllers

@@ -3,7 +3,7 @@ using mvc01.Models.Contact;
 using Microsoft.EntityFrameworkCore;
 using mvc01.Models;
 using Microsoft.AspNetCore.Authorization;
-using App.Data;
+using mvc01.Data;
 
 namespace mvc01.Areas.Contact.Controllers
 {
