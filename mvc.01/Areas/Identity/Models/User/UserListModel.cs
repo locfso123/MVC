@@ -1,5 +1,5 @@
 using System.Collections.Generic;
-using App.Models;
+
 using mvc01.Models;
 
 namespace mvc01.Areas.Identity.Models.UserViewModels

@@ -1,0 +1,45 @@
+@model mvc01.Models.Blog.Post
+
+@{
+    ViewData["Title"] = Model.Title;
+}
+
+<div class="container">
+    <article class="blog-post">
+        <h1 class="blog-post-title">@Model.Title</h1>
+        
+        <div class="blog-post-meta">
+            <span class="text-muted">
+                Đăng bởi @Model.Author?.UserName vào @Model.DateCreated.ToString("dd/MM/yyyy")
+                @if (Model.DateUpdated != Model.DateCreated)
+                {
+                    <span> - Cập nhật: @Model.DateUpdated.ToString("dd/MM/yyyy")</span>
+                }
+            </span>
+        </div>
+
+        @if (Model.PostCategories != null && Model.PostCategories.Count > 0)
+        {
+            <div class="blog-post-categories mt-2">
+                <span>Danh mục: </span>
+                @foreach (var pc in Model.PostCategories)
+                {
+                    <a href="#" class="badge bg-secondary text-decoration-none me-1">@pc.Category.Title</a>
+                }
+            </div>
+        }
+
+        <hr />
+
+        @if (!string.IsNullOrEmpty(Model.Description))
+        {
+            <div class="blog-post-description lead mb-3">
+                @Model.Description
+            </div>
+        }
+
+        <div class="blog-post-content">
+            @Html.Raw(Model.Content)
+        </div>
+    </article>
+</div>

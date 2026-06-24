@@ -9,7 +9,6 @@ using System.Text.Encodings.Web;
 using System.Threading.Tasks;
 using App.Areas.Identity.Models.AccountViewModels;
 using App.ExtendMethods;
-using App.Models;
 using App.Utilities;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Identity;

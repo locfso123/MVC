@@ -1,0 +1,54 @@
+@model IEnumerable<mvc01.Models.Blog.Post>
+
+@{
+    ViewData["Title"] = "Blog";
+}
+
+<h1>@ViewData["Title"]</h1>
+
+<div class="row">
+    @foreach (var post in Model)
+    {
+        <div class="col-md-12 mb-4">
+            <div class="card">
+                <div class="card-body">
+                    <h2 class="card-title">
+                        <a asp-action="Details" asp-route-slug="@post.Slug" class="text-decoration-none text-dark">
+                            @post.Title
+                        </a>
+                    </h2>
+                    
+                    @if (!string.IsNullOrEmpty(post.Description))
+                    {
+                        <p class="card-text text-muted">@post.Description</p>
+                    }
+                    
+                    <div class="card-text">
+                        <small class="text-muted">
+                            Đăng bởi @post.Author?.UserName vào @post.DateCreated.ToString("dd/MM/yyyy")
+                        </small>
+                        
+                        @if (post.PostCategories != null && post.PostCategories.Count > 0)
+                        {
+                            <span class="ms-2">
+                                @foreach (var pc in post.PostCategories)
+                                {
+                                    <span class="badge bg-secondary">@pc.Category.Title</span>
+                                }
+                            </span>
+                        }
+                    </div>
+                    
+                    <a asp-action="Details" asp-route-slug="@post.Slug" class="btn btn-primary btn-sm mt-2">Đọc tiếp</a>
+                </div>
+            </div>
+        </div>
+    }
+</div>
+
+@if (!Model.Any())
+{
+    <div class="alert alert-info">
+        Chưa có bài viết nào được đăng.
+    </div>
+}

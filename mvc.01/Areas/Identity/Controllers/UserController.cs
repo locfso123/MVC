@@ -11,7 +11,7 @@ using App.Areas.Identity.Models.ManageViewModels;
 using App.Areas.Identity.Models.RoleViewModels;
 using App.Areas.Identity.Models.UserViewModels;
 using App.ExtendMethods;
-using App.Models;
+
 using App.Services;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Identity;

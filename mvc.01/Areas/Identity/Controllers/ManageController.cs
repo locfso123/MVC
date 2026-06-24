@@ -5,7 +5,7 @@ using System.Linq;
 using System.Threading.Tasks;
 using App.Areas.Identity.Models.ManageViewModels;
 using App.ExtendMethods;
-using App.Models;
+
 using App.Services;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Identity;

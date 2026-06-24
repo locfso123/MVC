@@ -38,6 +38,19 @@
           }
         }
       },
+      "Bogus/35.6.5": {
+        "type": "package",
+        "compile": {
+          "lib/net6.0/Bogus.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/net6.0/Bogus.dll": {
+            "related": ".xml"
+          }
+        }
+      },
       "BouncyCastle.Cryptography/2.6.2": {
         "type": "package",
         "compile": {
@@ -658,6 +671,19 @@
         "runtime": {
           "lib/net10.0/MailKit.dll": {
             "related": ".dll.config;.pdb;.xml"
+          }
+        }
+      },
+      "Microsoft.AspNet.Identity.Core/2.2.4": {
+        "type": "package",
+        "compile": {
+          "lib/net45/Microsoft.AspNet.Identity.Core.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/net45/Microsoft.AspNet.Identity.Core.dll": {
+            "related": ".xml"
           }
         }
       },
@@ -2643,6 +2669,27 @@
         "lib/netstandard2.0/Azure.Identity.xml"
       ]
     },
+    "Bogus/35.6.5": {
+      "sha512": "2FGZn+aAVHjmCgClgmGkTDBVZk0zkLvAKGaxEf5JL6b3i9JbHTE4wnuY4vHCuzlCmJdU6VZjgDfHwmYkQF8VAA==",
+      "type": "package",
+      "path": "bogus/35.6.5",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "LICENSE",
+        "bogus.128.png",
+        "bogus.35.6.5.nupkg.sha512",
+        "bogus.nuspec",
+        "lib/net40/Bogus.dll",
+        "lib/net40/Bogus.xml",
+        "lib/net6.0/Bogus.dll",
+        "lib/net6.0/Bogus.xml",
+        "lib/netstandard1.3/Bogus.dll",
+        "lib/netstandard1.3/Bogus.xml",
+        "lib/netstandard2.0/Bogus.dll",
+        "lib/netstandard2.0/Bogus.xml"
+      ]
+    },
     "BouncyCastle.Cryptography/2.6.2": {
       "sha512": "7oWOcvnntmMKNzDLsdxAYqApt+AjpRpP2CShjMfIa3umZ42UQMvH0tl1qAliYPNYO6vTdcGMqnRrCPmsfzTI1w==",
       "type": "package",
@@ -3451,6 +3498,19 @@
         "lib/netstandard2.1/MailKit.xml",
         "mailkit.4.17.0.nupkg.sha512",
         "mailkit.nuspec"
+      ]
+    },
+    "Microsoft.AspNet.Identity.Core/2.2.4": {
+      "sha512": "s3u/o3iG5h0z7Ggukwo4soPwogD56ZrYbolGxTfw41zkuG6jAXUJT/V3EThqHJXGuCNvWSdSnnwAhPfT9Sn36g==",
+      "type": "package",
+      "path": "microsoft.aspnet.identity.core/2.2.4",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "lib/net45/Microsoft.AspNet.Identity.Core.dll",
+        "lib/net45/Microsoft.AspNet.Identity.Core.xml",
+        "microsoft.aspnet.identity.core.2.2.4.nupkg.sha512",
+        "microsoft.aspnet.identity.core.nuspec"
       ]
     },
     "Microsoft.AspNetCore.Authentication.Facebook/10.0.9": {
@@ -6858,7 +6918,9 @@
   },
   "projectFileDependencyGroups": {
     "net10.0": [
+      "Bogus >= 35.6.5",
       "MailKit >= 4.17.0",
+      "Microsoft.AspNet.Identity.Core >= 2.2.4",
       "Microsoft.AspNetCore.Authentication.Facebook >= 10.0.9",
       "Microsoft.AspNetCore.Authentication.Google >= 10.0.9",
       "Microsoft.AspNetCore.Authentication.JwtBearer >= 10.0.9",
@@ -6930,9 +6992,17 @@
         "framework": "net10.0",
         "targetAlias": "net10.0",
         "dependencies": {
+          "Bogus": {
+            "target": "Package",
+            "version": "[35.6.5, )"
+          },
           "MailKit": {
             "target": "Package",
             "version": "[4.17.0, )"
+          },
+          "Microsoft.AspNet.Identity.Core": {
+            "target": "Package",
+            "version": "[2.2.4, )"
           },
           "Microsoft.AspNetCore.Authentication.Facebook": {
             "target": "Package",
@@ -7443,5 +7513,17 @@
         }
       }
     }
-  }
+  },
+  "logs": [
+    {
+      "code": "NU1701",
+      "level": "Warning",
+      "warningLevel": 1,
+      "message": "Package 'Microsoft.AspNet.Identity.Core 2.2.4' was restored using '.NETFramework,Version=v4.6.1, .NETFramework,Version=v4.6.2, .NETFramework,Version=v4.7, .NETFramework,Version=v4.7.1, .NETFramework,Version=v4.7.2, .NETFramework,Version=v4.8, .NETFramework,Version=v4.8.1' instead of the project target framework 'net10.0'. This package may not be fully compatible with your project.",
+      "libraryId": "Microsoft.AspNet.Identity.Core",
+      "targetGraphs": [
+        "net10.0"
+      ]
+    }
+  ]
 }

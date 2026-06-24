@@ -10,7 +10,7 @@ using Microsoft.EntityFrameworkCore;
 using Microsoft.AspNetCore.Identity;
 using mvc01.Data;
 using App.Services;
-using App.Models;
+
 
 var builder = WebApplication.CreateBuilder(args);
 

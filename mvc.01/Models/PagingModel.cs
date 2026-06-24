@@ -1,6 +1,6 @@
 using System;
 
-namespace App.Models
+namespace mvc01.Models
 {
     public class PagingModel
     {

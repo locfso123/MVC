@@ -10,9 +10,7 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <Folder Include="Areas\Blog\Controllers\" />
     <Folder Include="Areas\Blog\Data\" />
-    <Folder Include="Areas\Blog\Models\" />
     <Folder Include="Areas\Contact\Data\" />
     <Folder Include="Areas\Contact\Models\" />
     <Folder Include="Areas\Contact\Views\Contact\" />
@@ -22,7 +20,9 @@
   </ItemGroup>
 
   <ItemGroup>
+    <PackageReference Include="Bogus" Version="35.6.5" />
     <PackageReference Include="MailKit" Version="4.17.0" />
+    <PackageReference Include="Microsoft.AspNet.Identity.Core" Version="2.2.4" />
     <PackageReference Include="Microsoft.AspNetCore.Authentication.Facebook" Version="10.0.9" />
     <PackageReference Include="Microsoft.AspNetCore.Authentication.Google" Version="10.0.9" />
     <PackageReference Include="Microsoft.AspNetCore.Authentication.JwtBearer" Version="10.0.9" />
