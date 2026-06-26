@@ -42,5 +42,30 @@ namespace mvc01.Models.Blog
         [Display(Name = "Danh mục cha")]
         public Category? ParentCategory { set; get; }
 
+
+        public void ChildCategoryIDs(ICollection<Category> childCates, List<int> list)
+        {
+            if (childCates == null)
+                childCates = this.CategoryChildren;
+
+            foreach (Category category in childCates)
+            {
+                list.Add(category.Id);
+                ChildCategoryIDs(category.CategoryChildren, list);
+            }
+        }
+
+        public List<Category> ListParents()
+        {
+            List<Category> li = new List<Category>();
+            var parent = this.ParentCategory;
+            while (parent != null)
+            {
+                li.Add(parent);
+                parent = parent.ParentCategory;
+            }
+            li.Reverse();
+            return li;
     }
+}
 }

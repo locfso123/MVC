@@ -1,5 +1,6 @@
 wwwroot\css\site.css
 wwwroot\favicon.ico
+wwwroot\ImageNoLoad\images.png
 wwwroot\js\site.js
 wwwroot\lib\bootstrap\dist\css\bootstrap-grid.css
 wwwroot\lib\bootstrap\dist\css\bootstrap-grid.css.map
@@ -69,6 +70,8 @@ wwwroot\planet\Neptune.jpg
 wwwroot\planet\Saturn.jpg
 wwwroot\planet\Uranus.jpg
 wwwroot\planet\Venus.jpg
+C:\Users\Contantin\source\repos\mvc.01\mvc.01\wwwroot\css\site.css
+C:\Users\Contantin\source\repos\mvc.01\mvc.01\wwwroot\favicon.ico
 C:\Users\Contantin\source\repos\mvc.01\mvc.01\wwwroot\js\site.js
 C:\Users\Contantin\source\repos\mvc.01\mvc.01\wwwroot\lib\bootstrap\dist\css\bootstrap-grid.css
 C:\Users\Contantin\source\repos\mvc.01\mvc.01\wwwroot\lib\bootstrap\dist\css\bootstrap-grid.css.map
@@ -129,5 +132,3 @@ C:\Users\Contantin\source\repos\mvc.01\mvc.01\wwwroot\lib\jquery\dist\jquery.sli
 C:\Users\Contantin\source\repos\mvc.01\mvc.01\wwwroot\lib\jquery\dist\jquery.slim.min.js
 C:\Users\Contantin\source\repos\mvc.01\mvc.01\wwwroot\lib\jquery\dist\jquery.slim.min.map
 C:\Users\Contantin\source\repos\mvc.01\mvc.01\wwwroot\lib\jquery\LICENSE.txt
-C:\Users\Contantin\source\repos\mvc.01\mvc.01\wwwroot\favicon.ico
-C:\Users\Contantin\source\repos\mvc.01\mvc.01\wwwroot\css\site.css
