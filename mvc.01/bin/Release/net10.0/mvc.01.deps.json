@@ -10,7 +10,6 @@
         "dependencies": {
           "Bogus": "35.6.5",
           "MailKit": "4.17.0",
-          "Microsoft.AspNet.Identity.Core": "2.2.4",
           "Microsoft.AspNetCore.Authentication.Facebook": "10.0.9",
           "Microsoft.AspNetCore.Authentication.Google": "10.0.9",
           "Microsoft.AspNetCore.Authentication.JwtBearer": "10.0.9",
@@ -26,7 +25,8 @@
           "MimeKit": "4.17.0",
           "NuGet.Packaging": "6.12.5",
           "NuGet.Protocol": "6.12.5",
-          "System.Data.SqlClient": "4.9.1"
+          "System.Data.SqlClient": "4.9.1",
+          "elFinder.NetCore": "1.6.0"
         },
         "runtime": {
           "mvc.01.dll": {}
@@ -71,6 +71,17 @@
           "lib/net6.0/BouncyCastle.Cryptography.dll": {
             "assemblyVersion": "2.0.0.0",
             "fileVersion": "2.6.2.46322"
+          }
+        }
+      },
+      "elFinder.NetCore/1.6.0": {
+        "dependencies": {
+          "SixLabors.ImageSharp": "3.1.12"
+        },
+        "runtime": {
+          "lib/net10.0/elFinder.NetCore.dll": {
+            "assemblyVersion": "1.6.0.0",
+            "fileVersion": "1.6.0.0"
           }
         }
       },
@@ -622,14 +633,6 @@
           "lib/net10.0/MailKit.dll": {
             "assemblyVersion": "4.17.0.0",
             "fileVersion": "4.17.0.0"
-          }
-        }
-      },
-      "Microsoft.AspNet.Identity.Core/2.2.4": {
-        "runtime": {
-          "lib/net45/Microsoft.AspNet.Identity.Core.dll": {
-            "assemblyVersion": "2.0.0.0",
-            "fileVersion": "2.2.4.50621"
           }
         }
       },
@@ -1890,6 +1893,14 @@
           }
         }
       },
+      "SixLabors.ImageSharp/3.1.12": {
+        "runtime": {
+          "lib/net6.0/SixLabors.ImageSharp.dll": {
+            "assemblyVersion": "3.0.0.0",
+            "fileVersion": "3.1.12.0"
+          }
+        }
+      },
       "System.ClientModel/1.5.1": {
         "dependencies": {
           "System.Memory.Data": "8.0.1"
@@ -2076,6 +2087,13 @@
       "sha512": "sha512-7oWOcvnntmMKNzDLsdxAYqApt+AjpRpP2CShjMfIa3umZ42UQMvH0tl1qAliYPNYO6vTdcGMqnRrCPmsfzTI1w==",
       "path": "bouncycastle.cryptography/2.6.2",
       "hashPath": "bouncycastle.cryptography.2.6.2.nupkg.sha512"
+    },
+    "elFinder.NetCore/1.6.0": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-SNZtGSZ6JfWOX6pW7h3PpGUFX1Lw8PLk2YJpwJ7nOgXHeQrUpQXq8b50pox5zabV5XO6pwNp98mR3AOE0AWvjQ==",
+      "path": "elfinder.netcore/1.6.0",
+      "hashPath": "elfinder.netcore.1.6.0.nupkg.sha512"
     },
     "Humanizer/2.14.1": {
       "type": "package",
@@ -2433,13 +2451,6 @@
       "sha512": "sha512-1nUAVLxM9fhT/78we6/AGsCesnpn5dRNLLeRqOfr52Wnk87pzVwo5YMTMyqnmoXrYc7piGhmayiMA/OgDluIjg==",
       "path": "mailkit/4.17.0",
       "hashPath": "mailkit.4.17.0.nupkg.sha512"
-    },
-    "Microsoft.AspNet.Identity.Core/2.2.4": {
-      "type": "package",
-      "serviceable": true,
-      "sha512": "sha512-s3u/o3iG5h0z7Ggukwo4soPwogD56ZrYbolGxTfw41zkuG6jAXUJT/V3EThqHJXGuCNvWSdSnnwAhPfT9Sn36g==",
-      "path": "microsoft.aspnet.identity.core/2.2.4",
-      "hashPath": "microsoft.aspnet.identity.core.2.2.4.nupkg.sha512"
     },
     "Microsoft.AspNetCore.Authentication.Facebook/10.0.9": {
       "type": "package",
@@ -2909,6 +2920,13 @@
       "sha512": "sha512-YhEdSQUsTx+C8m8Bw7ar5/VesXvCFMItyZF7G1AUY+OM0VPZUOeAVpJ4Wl6fydBGUYZxojTDR3I6Bj/+BPkJNA==",
       "path": "runtime.win-x86.runtime.native.system.data.sqlclient.sni/4.4.0",
       "hashPath": "runtime.win-x86.runtime.native.system.data.sqlclient.sni.4.4.0.nupkg.sha512"
+    },
+    "SixLabors.ImageSharp/3.1.12": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-iAg6zifihXEFS/t7fiHhZBGAdCp3FavsF4i2ZIDp0JfeYeDVzvmlbY1CNhhIKimaIzrzSi5M/NBFcWvZT2rB/A==",
+      "path": "sixlabors.imagesharp/3.1.12",
+      "hashPath": "sixlabors.imagesharp.3.1.12.nupkg.sha512"
     },
     "System.ClientModel/1.5.1": {
       "type": "package",

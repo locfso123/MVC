@@ -1,4 +1,4 @@
-﻿namespace mvc01.Models
+﻿/*namespace mvc01.Models
 {
     public class ProductModel
     {
@@ -7,3 +7,4 @@
         public double Price { get; set; }
     }
 }
+*/

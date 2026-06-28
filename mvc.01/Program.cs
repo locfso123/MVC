@@ -10,6 +10,7 @@ using Microsoft.EntityFrameworkCore;
 using Microsoft.AspNetCore.Identity;
 using mvc01.Data;
 using App.Services;
+using Microsoft.Extensions.FileProviders;
 
 
 var builder = WebApplication.CreateBuilder(args);
@@ -34,7 +35,7 @@ builder.Services.Configure<RazorViewEngineOptions>(options =>
     options.ViewLocationFormats.Add("/MyView/{1}/{0}" + RazorViewEngine.ViewExtension);
 });
 
-builder.Services.AddSingleton(typeof(ProductService), typeof(ProductService));
+// builder.Services.AddSingleton(typeof(ProductService), typeof(ProductService));
 builder.Services.AddSingleton<PlanetService>();
 
 builder.Services.AddIdentity<AppUser, IdentityRole>()
@@ -113,6 +114,13 @@ app.UseRouting();
 app.UseAuthentication();
 app.UseAuthorization();
 
+app.UseStaticFiles(new StaticFileOptions() { 
+    FileProvider =new PhysicalFileProvider(
+            Path.Combine(Directory.GetCurrentDirectory(), "Uploads")
+        ),
+    RequestPath = "/contents"
+});
+
 app.AddStatusCodePage();
 
 app.UseEndpoints(endpoints =>
@@ -152,7 +160,7 @@ app.UseEndpoints(endpoints =>
 
 });
 
-app.MapStaticAssets();
+app.MapStaticAssets();  
 
 app.MapControllerRoute(
     name: "default",

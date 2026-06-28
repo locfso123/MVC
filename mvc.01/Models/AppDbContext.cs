@@ -2,6 +2,7 @@
 using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore;
 using mvc01.Models.Blog;
+using mvc01.Models.Product;
 
 namespace mvc01.Models
 {
@@ -48,6 +49,26 @@ namespace mvc01.Models
                 entity.Property(p => p.AuthorId)
                       .IsRequired(false);
             });
+
+
+
+
+            modelBuilder.Entity<CategoryProduct>(entity =>
+            {
+                entity.HasIndex(c => c.Slug)
+                      .IsUnique();
+            });
+
+            modelBuilder.Entity<ProductCategoryProduct>(entity =>
+            {
+                entity.HasKey(c => new { c.ProductID, c.CategoryID });
+            });
+
+            modelBuilder.Entity<ProductModel>(entity =>
+            {
+                entity.HasIndex(p => p.Slug)
+                      .IsUnique();
+            });
         }
 
         public DbSet<mvc01.Models.Contact.Contact> Contacts { get; set; }
@@ -58,5 +79,12 @@ namespace mvc01.Models
 
         public DbSet<PostCategory> PostCategories { get; set; }
 
+
+
+        public DbSet<CategoryProduct> CategoryProducts   { get; set; }
+
+        public DbSet<ProductModel> Products { get; set; }
+
+        public DbSet<ProductCategoryProduct> ProductCategoryProducts { get; set; }
     }
 }

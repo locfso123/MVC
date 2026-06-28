@@ -1,4 +1,4 @@
-﻿using Microsoft.AspNetCore.Mvc;
+﻿/*using Microsoft.AspNetCore.Mvc;
 using mvc01.Services;
 
 namespace mvc01.Controllers
@@ -23,4 +23,4 @@ namespace mvc01.Controllers
             return View(products);
         }
     }
-}
+}*/

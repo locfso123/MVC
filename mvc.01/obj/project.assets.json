@@ -64,6 +64,21 @@
           }
         }
       },
+      "elFinder.NetCore/1.6.0": {
+        "type": "package",
+        "dependencies": {
+          "SixLabors.ImageSharp": "3.1.12"
+        },
+        "compile": {
+          "lib/net10.0/elFinder.NetCore.dll": {}
+        },
+        "runtime": {
+          "lib/net10.0/elFinder.NetCore.dll": {}
+        },
+        "frameworkReferences": [
+          "Microsoft.AspNetCore.App"
+        ]
+      },
       "Humanizer/2.14.1": {
         "type": "package",
         "dependencies": {
@@ -671,19 +686,6 @@
         "runtime": {
           "lib/net10.0/MailKit.dll": {
             "related": ".dll.config;.pdb;.xml"
-          }
-        }
-      },
-      "Microsoft.AspNet.Identity.Core/2.2.4": {
-        "type": "package",
-        "compile": {
-          "lib/net45/Microsoft.AspNet.Identity.Core.dll": {
-            "related": ".xml"
-          }
-        },
-        "runtime": {
-          "lib/net45/Microsoft.AspNet.Identity.Core.dll": {
-            "related": ".xml"
           }
         }
       },
@@ -2340,6 +2342,22 @@
           }
         }
       },
+      "SixLabors.ImageSharp/3.1.12": {
+        "type": "package",
+        "compile": {
+          "lib/net6.0/SixLabors.ImageSharp.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/net6.0/SixLabors.ImageSharp.dll": {
+            "related": ".xml"
+          }
+        },
+        "build": {
+          "build/_._": {}
+        }
+      },
       "System.ClientModel/1.5.1": {
         "type": "package",
         "dependencies": {
@@ -2708,6 +2726,18 @@
         "lib/netstandard2.0/BouncyCastle.Cryptography.dll",
         "lib/netstandard2.0/BouncyCastle.Cryptography.xml",
         "packageIcon.png"
+      ]
+    },
+    "elFinder.NetCore/1.6.0": {
+      "sha512": "SNZtGSZ6JfWOX6pW7h3PpGUFX1Lw8PLk2YJpwJ7nOgXHeQrUpQXq8b50pox5zabV5XO6pwNp98mR3AOE0AWvjQ==",
+      "type": "package",
+      "path": "elfinder.netcore/1.6.0",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "elfinder.netcore.1.6.0.nupkg.sha512",
+        "elfinder.netcore.nuspec",
+        "lib/net10.0/elFinder.NetCore.dll"
       ]
     },
     "Humanizer/2.14.1": {
@@ -3498,19 +3528,6 @@
         "lib/netstandard2.1/MailKit.xml",
         "mailkit.4.17.0.nupkg.sha512",
         "mailkit.nuspec"
-      ]
-    },
-    "Microsoft.AspNet.Identity.Core/2.2.4": {
-      "sha512": "s3u/o3iG5h0z7Ggukwo4soPwogD56ZrYbolGxTfw41zkuG6jAXUJT/V3EThqHJXGuCNvWSdSnnwAhPfT9Sn36g==",
-      "type": "package",
-      "path": "microsoft.aspnet.identity.core/2.2.4",
-      "files": [
-        ".nupkg.metadata",
-        ".signature.p7s",
-        "lib/net45/Microsoft.AspNet.Identity.Core.dll",
-        "lib/net45/Microsoft.AspNet.Identity.Core.xml",
-        "microsoft.aspnet.identity.core.2.2.4.nupkg.sha512",
-        "microsoft.aspnet.identity.core.nuspec"
       ]
     },
     "Microsoft.AspNetCore.Authentication.Facebook/10.0.9": {
@@ -6477,6 +6494,22 @@
         "version.txt"
       ]
     },
+    "SixLabors.ImageSharp/3.1.12": {
+      "sha512": "iAg6zifihXEFS/t7fiHhZBGAdCp3FavsF4i2ZIDp0JfeYeDVzvmlbY1CNhhIKimaIzrzSi5M/NBFcWvZT2rB/A==",
+      "type": "package",
+      "path": "sixlabors.imagesharp/3.1.12",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "LICENSE",
+        "build/SixLabors.ImageSharp.props",
+        "lib/net6.0/SixLabors.ImageSharp.dll",
+        "lib/net6.0/SixLabors.ImageSharp.xml",
+        "sixlabors.imagesharp.128.png",
+        "sixlabors.imagesharp.3.1.12.nupkg.sha512",
+        "sixlabors.imagesharp.nuspec"
+      ]
+    },
     "System.ClientModel/1.5.1": {
       "sha512": "k2jKSO0X45IqhVOT9iQB4xralNN9foRQsRvXBTyRpAVxyzCJlG895T9qYrQWbcJ6OQXxOouJQ37x5nZH5XKK+A==",
       "type": "package",
@@ -6920,7 +6953,6 @@
     "net10.0": [
       "Bogus >= 35.6.5",
       "MailKit >= 4.17.0",
-      "Microsoft.AspNet.Identity.Core >= 2.2.4",
       "Microsoft.AspNetCore.Authentication.Facebook >= 10.0.9",
       "Microsoft.AspNetCore.Authentication.Google >= 10.0.9",
       "Microsoft.AspNetCore.Authentication.JwtBearer >= 10.0.9",
@@ -6937,7 +6969,8 @@
       "MimeKit >= 4.17.0",
       "NuGet.Packaging >= 6.12.5",
       "NuGet.Protocol >= 6.12.5",
-      "System.Data.SqlClient >= 4.9.1"
+      "System.Data.SqlClient >= 4.9.1",
+      "elFinder.NetCore >= 1.6.0"
     ]
   },
   "packageFolders": {
@@ -6999,10 +7032,6 @@
           "MailKit": {
             "target": "Package",
             "version": "[4.17.0, )"
-          },
-          "Microsoft.AspNet.Identity.Core": {
-            "target": "Package",
-            "version": "[2.2.4, )"
           },
           "Microsoft.AspNetCore.Authentication.Facebook": {
             "target": "Package",
@@ -7075,6 +7104,10 @@
           "System.Data.SqlClient": {
             "target": "Package",
             "version": "[4.9.1, )"
+          },
+          "elFinder.NetCore": {
+            "target": "Package",
+            "version": "[1.6.0, )"
           }
         },
         "imports": [
@@ -7513,17 +7546,5 @@
         }
       }
     }
-  },
-  "logs": [
-    {
-      "code": "NU1701",
-      "level": "Warning",
-      "warningLevel": 1,
-      "message": "Package 'Microsoft.AspNet.Identity.Core 2.2.4' was restored using '.NETFramework,Version=v4.6.1, .NETFramework,Version=v4.6.2, .NETFramework,Version=v4.7, .NETFramework,Version=v4.7.1, .NETFramework,Version=v4.7.2, .NETFramework,Version=v4.8, .NETFramework,Version=v4.8.1' instead of the project target framework 'net10.0'. This package may not be fully compatible with your project.",
-      "libraryId": "Microsoft.AspNet.Identity.Core",
-      "targetGraphs": [
-        "net10.0"
-      ]
-    }
-  ]
+  }
 }

@@ -1,4 +1,4 @@
-﻿using Microsoft.AspNetCore.Mvc;
+﻿/*using Microsoft.AspNetCore.Mvc;
 using mvc01.Services;
 
 namespace mvc01.Controllers
@@ -61,13 +61,13 @@ namespace mvc01.Controllers
             var product = _productService.Where(p => p.Id == id).FirstOrDefault();
             if (product == null)
             {
-                /*TempData["StatusMessage"] = "San pham ban yeu cau khong co";*/
+                *//*TempData["StatusMessage"] = "San pham ban yeu cau khong co";*//*
                 StatusMessage = "San pham ban yeu cau khong co";
                 return Redirect(Url.Action("Index", "Home"));
             }
 
-            /*return View(product);*/
-            /*this.ViewData["product"] = product;*/
+            *//*return View(product);*/
+            /*this.ViewData["product"] = product;*//*
             this.ViewData["Title"] = product.Name;
 
             ViewBag.product = product;
@@ -76,3 +76,4 @@ namespace mvc01.Controllers
         }
     }
 }
+*/

@@ -10,7 +10,6 @@
         "dependencies": {
           "Bogus": "35.6.5",
           "MailKit": "4.17.0",
-          "Microsoft.AspNet.Identity.Core": "2.2.4",
           "Microsoft.AspNetCore.Authentication.Facebook": "10.0.9",
           "Microsoft.AspNetCore.Authentication.Google": "10.0.9",
           "Microsoft.AspNetCore.Authentication.JwtBearer": "10.0.9",
@@ -622,14 +621,6 @@
           "lib/net10.0/MailKit.dll": {
             "assemblyVersion": "4.17.0.0",
             "fileVersion": "4.17.0.0"
-          }
-        }
-      },
-      "Microsoft.AspNet.Identity.Core/2.2.4": {
-        "runtime": {
-          "lib/net45/Microsoft.AspNet.Identity.Core.dll": {
-            "assemblyVersion": "2.0.0.0",
-            "fileVersion": "2.2.4.50621"
           }
         }
       },
@@ -2433,13 +2424,6 @@
       "sha512": "sha512-1nUAVLxM9fhT/78we6/AGsCesnpn5dRNLLeRqOfr52Wnk87pzVwo5YMTMyqnmoXrYc7piGhmayiMA/OgDluIjg==",
       "path": "mailkit/4.17.0",
       "hashPath": "mailkit.4.17.0.nupkg.sha512"
-    },
-    "Microsoft.AspNet.Identity.Core/2.2.4": {
-      "type": "package",
-      "serviceable": true,
-      "sha512": "sha512-s3u/o3iG5h0z7Ggukwo4soPwogD56ZrYbolGxTfw41zkuG6jAXUJT/V3EThqHJXGuCNvWSdSnnwAhPfT9Sn36g==",
-      "path": "microsoft.aspnet.identity.core/2.2.4",
-      "hashPath": "microsoft.aspnet.identity.core.2.2.4.nupkg.sha512"
     },
     "Microsoft.AspNetCore.Authentication.Facebook/10.0.9": {
       "type": "package",
